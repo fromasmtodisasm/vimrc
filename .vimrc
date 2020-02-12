@@ -10,7 +10,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'morhetz/gruvbox'
 Plug 'majutsushi/tagbar'
 "Plug 'bling/vim-airline'
-Plug 'valloric/youcompleteme'
+"Plug 'valloric/youcompleteme'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -23,7 +23,8 @@ Plug 'vim-scripts/glsl.vim'
 Plug 'thaerkh/vim-workspace'
 Plug 'jistr/vim-nerdtree-tabs'
 
-
+" diff merge conflicts support
+Plug 'tpope/vim-unimpaired'
 " Initialize plugin system
 call plug#end()
 
