@@ -1,5 +1,14 @@
 #!/bin/sh
 
-cp ~/.vimrc ./
-git add .vimrc
-git commit -m "- update"
+if [ -f ~/.vimrc ]; then
+  if [ `(git diff --staged | wc -l)` -ne 0 ]; then
+    echo "Make commit before"
+    exit -1
+  fi
+  cp ~/.vimrc ./
+  git add .vimrc
+  git commit -m "- update"
+else
+  echo "Not exist .vimrc"
+  exit -1
+fi
