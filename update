@@ -7,7 +7,7 @@ if [ -f ~/.vimrc ]; then
   fi
   cp ~/.vimrc ./
   git add .vimrc
-  git commit -m "- update"
+  git commit -m "- update .vimrc"
 else
   echo "Not exist .vimrc"
   exit -1
