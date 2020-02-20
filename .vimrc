@@ -22,6 +22,10 @@ Plug 'beyondmarc/opengl.vim'
 Plug 'vim-scripts/glsl.vim'
 Plug 'thaerkh/vim-workspace'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'ilyachur/cmake4vim'
+Plug 'othree/xml.vim'
+Plug 'amiorin/vim-project'
+Plug 'tpope/vim-dispatch'
 
 " diff merge conflicts support
 Plug 'tpope/vim-unimpaired'
@@ -34,7 +38,7 @@ colorscheme gruvbox
 set background=dark
 
 """""""""""""""""""""""""""""""
-set colorcolumn=110
+set colorcolumn=125
 highlight ColorColumn ctermbg=lightgreen
 """""""""""""""""""""""""""""""
 let g:mapleader=','
@@ -71,5 +75,11 @@ let g:workspace_session_name = 'Session.vim'
 nnoremap <leader>s :ToggleWorkspace<CR>
 "let g:workspace_session_directory = $HOME . '/.vim/sessions/'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_custom_ignore = 'build\|stage|git'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:localvimrc_sandbox=0
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let xml_tag_completion_map = "<C-l>"
 
 map <Leader> <Plug>(easymotion-prefix)
