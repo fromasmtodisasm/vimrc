@@ -27,6 +27,12 @@ Plug 'othree/xml.vim'
 Plug 'amiorin/vim-project'
 Plug 'tpope/vim-dispatch'
 
+Plug 'haya14busa/incsearch.vim'
+
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-fuzzy.vim'
+Plug 'haya14busa/incsearch-easymotion.vim'
+
 " diff merge conflicts support
 Plug 'tpope/vim-unimpaired'
 " Initialize plugin system
@@ -41,7 +47,7 @@ set background=dark
 set colorcolumn=125
 highlight ColorColumn ctermbg=lightgreen
 """""""""""""""""""""""""""""""
-let g:mapleader=','
+"let g:mapleader=','
 """""""""""""""""""""""""""""""
 
 set tabstop=2
@@ -81,5 +87,29 @@ let g:localvimrc_sandbox=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 let xml_tag_completion_map = "<C-l>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader> <Plug>(easymotion-prefix)
+map <Leader><Leader> <Plug>(easymotion-prefix)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" :h g:incsearch#auto_nohlsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+
+" In insert or command mode, move normally by using Ctrl
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
+
